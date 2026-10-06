@@ -12,7 +12,7 @@ git -C .\folio-app branch --show-current
 git -C .\folio-app remote -v
 ```
 
-The first command should end in `folio-app`. In the inspected environment, the workspace root itself has no `.git`; Git from there discovers `C:/Users/Owner`. That is outside the application. Do not use `git add .` or `git add -A` from the workspace root. `astra` is a sibling of the app repositories, so it will not be included in a Folio App commit. Save a PR-ready write-up in Astra and copy only application-specific documentation into the app when that is part of the story.
+The first command should end in `folio-app`. The workspace root itself is not a repository; if Git answers from there at all, it has found some unrelated repository further up the directory tree. Do not use `git add .` or `git add -A` from the workspace root. `astra` is a sibling of the app repositories, so it will not be included in a Folio App commit. Save a PR-ready write-up in Astra and copy only application-specific documentation into the app when that is part of the story.
 
 If the project has existing changes, inspect them and determine who owns them. Do not discard them to make the status clean. A separate checkout or agreed branch is preferable to mixing unrelated changes. Use the project's actual remote names and default branch; inspect them instead of assuming `origin/main` exists.
 

@@ -18,7 +18,7 @@ Trace `title` and `expectedVersion` through the rename path. Annotate each type,
 
 **Story:** As a maintainer, I want the rename contract mapped across layers so that a field change does not leave one consumer behind.
 
-**Start here:** [client types](../../folio-app/client/src/api/types.ts), [PageDtos](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs).
+**Start here:** [client types](https://github.com/elirc/folio-app/blob/main/client/src/api/types.ts), [PageDtos](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs).
 
 **Acceptance:**
 - Map title, icon, id, and version from UI value to request DTO, entity, and response.
@@ -37,7 +37,7 @@ Trace `title` and `expectedVersion` through the rename path. Annotate each type,
 
 **Story:** As a developer displaying favorites, I want to understand tree traversal so that nested pages are handled correctly.
 
-**Start here:** [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx), [PageTreeItem](../../folio-app/client/src/components/PageTreeItem.tsx).
+**Start here:** [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx), [PageTreeItem](https://github.com/elirc/folio-app/blob/main/client/src/components/PageTreeItem.tsx).
 
 **Acceptance:**
 - In scratch code, collect favorite ids from a root/child/grandchild fixture.
@@ -56,7 +56,7 @@ Trace `title` and `expectedVersion` through the rename path. Annotate each type,
 
 **Story:** As a reviewer, I want to understand the page-update rule order so that I can see whether invalid or forbidden input mutates state.
 
-**Start here:** [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [ServiceResult](../../folio-app/server/Folio.Api/Services/ServiceResult.cs).
+**Start here:** [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [ServiceResult](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/ServiceResult.cs).
 
 **Acceptance:**
 - Annotate `UpdateAsync` as read, caller check, validation/version check, mutation, and save.
@@ -75,7 +75,7 @@ Trace `title` and `expectedVersion` through the rename path. Annotate each type,
 
 **Story:** As a client developer, I want consistent error translation so that I can present the correct recovery action.
 
-**Start here:** [PagesController](../../folio-app/server/Folio.Api/Controllers/PagesController.cs), [client.ts](../../folio-app/client/src/api/client.ts), [HardeningTests](../../folio-app/server/Folio.Tests/HardeningTests.cs).
+**Start here:** [PagesController](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PagesController.cs), [client.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/client.ts), [HardeningTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/HardeningTests.cs).
 
 **Acceptance:**
 - Build a table mapping service status to HTTP status to client error shape.
@@ -94,7 +94,7 @@ Trace `title` and `expectedVersion` through the rename path. Annotate each type,
 
 **Story:** As a developer maintaining loaded views, I want to understand request cleanup so that old requests cannot update an obsolete view.
 
-**Start here:** [useAsync](../../folio-app/client/src/hooks/useAsync.ts), [SearchBox](../../folio-app/client/src/components/SearchBox.tsx).
+**Start here:** [useAsync](https://github.com/elirc/folio-app/blob/main/client/src/hooks/useAsync.ts), [SearchBox](https://github.com/elirc/folio-app/blob/main/client/src/components/SearchBox.tsx).
 
 **Acceptance:**
 - Draw start, resolution, rejection, dependency change, and unmount timelines.

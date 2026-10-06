@@ -18,7 +18,7 @@ Seed a bounded disposable workspace with a stated number of pages/favorites. Mea
 
 **Story:** As a member with many pages, I want favorites to remain responsive so that personal navigation scales beyond the tiny seed workspace.
 
-**Start here:** Your tree/favorite queries, [DbContext](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
+**Start here:** Your tree/favorite queries, [DbContext](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
 
 **Acceptance:**
 - Define a repeatable workload at two sizes and record query count, returned rows, and local timing context.
@@ -56,7 +56,7 @@ Seed a bounded disposable workspace with a stated number of pages/favorites. Mea
 
 **Story:** As a reviewer, I want one documented way to run the required checks so that contributors do not omit a gate accidentally.
 
-**Start here:** [client manifest](../../folio-app/client/package.json), [server solution](../../folio-app/server/Folio.slnx), [delivery guide](../handbook/delivery.md).
+**Start here:** [client manifest](https://github.com/elirc/folio-app/blob/main/client/package.json), [server solution](https://github.com/elirc/folio-app/blob/main/server/Folio.slnx), [delivery guide](../handbook/delivery.md).
 
 **Acceptance:**
 - Add an application-local verification script or documented sequence for server build/test and client test/build using existing tools.
@@ -75,7 +75,7 @@ Seed a bounded disposable workspace with a stated number of pages/favorites. Mea
 
 **Story:** As the next on-call learner, I want a short runbook so that I can distinguish API unavailability, database degradation, and write conflicts.
 
-**Start here:** [Program](../../folio-app/server/Folio.Api/Program.cs), [HealthEndpointTests](../../folio-app/server/Folio.Tests/HealthEndpointTests.cs), [debug template](../templates/debug-log.md).
+**Start here:** [Program](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Program.cs), [HealthEndpointTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/HealthEndpointTests.cs), [debug template](../templates/debug-log.md).
 
 **Acceptance:**
 - Document symptoms, first probe, expected evidence, and recovery for unavailable API, 503 health, 409 write, and 429 throttle.

@@ -18,7 +18,7 @@ Make a table for page detail, rename, and delete. Include 200/204 and applicable
 
 **Story:** As a client developer, I want exact page endpoint contracts so that I can implement predictable interactions.
 
-**Start here:** [PagesController](../../folio-app/server/Folio.Api/Controllers/PagesController.cs), [API reference](../../folio-app/docs/api-reference.md).
+**Start here:** [PagesController](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PagesController.cs), [API reference](https://github.com/elirc/folio-app/blob/main/docs/api-reference.md).
 
 **Acceptance:**
 - Document page GET, PUT, and DELETE with request fields, successful response/body, auth, and relevant errors.
@@ -37,7 +37,7 @@ Make a table for page detail, rename, and delete. Include 200/204 and applicable
 
 **Story:** As a user correcting a failed action, I want a useful error message so that I know what went wrong and what to change.
 
-**Start here:** [client.ts](../../folio-app/client/src/api/client.ts), [ProblemDetails server setup](../../folio-app/server/Folio.Api/Program.cs).
+**Start here:** [client.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/client.ts), [ProblemDetails server setup](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Program.cs).
 
 **Acceptance:**
 - For ProblemDetails with title and detail, prefer useful detail for the Error message while retaining the structured problem.
@@ -56,7 +56,7 @@ Make a table for page detail, rename, and delete. Include 200/204 and applicable
 
 **Story:** As a client maintainer, I want no-content responses handled correctly so that a successful delete is not displayed as a failure.
 
-**Start here:** [client.ts](../../folio-app/client/src/api/client.ts), [fetchMock](../../folio-app/client/src/test/fetchMock.ts).
+**Start here:** [client.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/client.ts), [fetchMock](https://github.com/elirc/folio-app/blob/main/client/src/test/fetchMock.ts).
 
 **Acceptance:**
 - A real-shaped 204 response resolves without parsing a body.
@@ -75,7 +75,7 @@ Make a table for page detail, rename, and delete. Include 200/204 and applicable
 
 **Story:** As a workspace owner, I want invalid direct requests rejected so that bypassing browser validation cannot corrupt page titles.
 
-**Start here:** [PageDtos](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs), [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [HardeningTests](../../folio-app/server/Folio.Tests/HardeningTests.cs).
+**Start here:** [PageDtos](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs), [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [HardeningTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/HardeningTests.cs).
 
 **Acceptance:**
 - Establish behavior for missing, empty, whitespace, 400-character, and 401-character titles.
@@ -94,7 +94,7 @@ Make a table for page detail, rename, and delete. Include 200/204 and applicable
 
 **Story:** As a member searching pages, I want accurate feedback for my latest query so that stale results and failed requests do not mislead me.
 
-**Start here:** [SearchBox](../../folio-app/client/src/components/SearchBox.tsx), [search tests](../../folio-app/client/src/components/SearchBox.test.tsx), [debugging](../handbook/debugging.md).
+**Start here:** [SearchBox](https://github.com/elirc/folio-app/blob/main/client/src/components/SearchBox.tsx), [search tests](https://github.com/elirc/folio-app/blob/main/client/src/components/SearchBox.test.tsx), [debugging](../handbook/debugging.md).
 
 **Acceptance:**
 - The latest query owns displayed results even when an obsolete promise completes later.

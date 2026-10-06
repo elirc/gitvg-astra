@@ -18,7 +18,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As a maintainer, I want a correct data diagram so that I can reason about page changes and deletion.
 
-**Start here:** [Page entity](../../folio-app/server/Folio.Domain/Entities/Page.cs), [DbContext](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
+**Start here:** [Page entity](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs), [DbContext](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
 
 **Acceptance:**
 - Draw Workspace, Member, Page, and Block with primary/foreign keys and cardinality.
@@ -37,7 +37,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As a page reader, I want a short summary so that I can understand a page's purpose before reading its blocks.
 
-**Start here:** [PageDtos](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs), [ADR template](../templates/adr.md).
+**Start here:** [PageDtos](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs), [ADR template](../templates/adr.md).
 
 **Acceptance:**
 - Specify nullable summary, maximum 280 characters, and whitespace-only normalization to null.
@@ -56,7 +56,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As an existing workspace owner, I want the summary feature added without losing pages so that an upgrade preserves my work.
 
-**Start here:** [Page](../../folio-app/server/Folio.Domain/Entities/Page.cs), [migration folder](../../folio-app/server/Folio.Infrastructure/Persistence/Migrations), [migration guide](../handbook/data-and-permissions.md).
+**Start here:** [Page](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs), [migration folder](https://github.com/elirc/folio-app/tree/main/server/Folio.Infrastructure/Persistence/Migrations), [migration guide](../handbook/data-and-permissions.md).
 
 **Acceptance:**
 - Add the nullable property and matching mapping/migration/snapshot.
@@ -75,7 +75,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As an authorized editor, I want to read and edit summaries so that page introductions stay useful.
 
-**Start here:** [PagesController](../../folio-app/server/Folio.Api/Controllers/PagesController.cs), [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [PageDtos](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs).
+**Start here:** [PagesController](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PagesController.cs), [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [PageDtos](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs).
 
 **Acceptance:**
 - Page detail exposes summary; the agreed update operation validates/normalizes and uses existing write authorization.
@@ -94,7 +94,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As an editor, I want an accessible summary field so that I can save or correct it without confusing it with page blocks.
 
-**Start here:** [PageView](../../folio-app/client/src/components/PageView.tsx), [API types](../../folio-app/client/src/api/types.ts), [typed endpoints](../../folio-app/client/src/api/folio.ts).
+**Start here:** [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx), [API types](https://github.com/elirc/folio-app/blob/main/client/src/api/types.ts), [typed endpoints](https://github.com/elirc/folio-app/blob/main/client/src/api/folio.ts).
 
 **Acceptance:**
 - Add matching client types/endpoint function and a labeled summary input with count and validation feedback.
@@ -113,7 +113,7 @@ Draw Workspace -> Page -> Block, plus Page's optional parent. Locate keys, forei
 
 **Story:** As a teammate deploying the change, I want upgrade evidence so that I can distinguish a tested migration from a fresh-install demonstration.
 
-**Start here:** [MigrationGuardTests](../../folio-app/server/Folio.Tests/MigrationGuardTests.cs), [delivery guide](../handbook/delivery.md).
+**Start here:** [MigrationGuardTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/MigrationGuardTests.cs), [delivery guide](../handbook/delivery.md).
 
 **Acceptance:**
 - Create a disposable database at the pre-summary migration, insert representative user data, and upgrade to the current migration.

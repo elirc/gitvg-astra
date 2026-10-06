@@ -37,7 +37,7 @@ Use three terminals: API, client, and commands. Create a page in the browser, re
 
 **Story:** As a teammate, I want a recorded setup baseline so that I can distinguish environment failures from changes in a patch.
 
-**Start here:** [setup](../onboarding/02-local-setup.md), [client manifest](../../folio-app/client/package.json), [API project](../../folio-app/server/Folio.Api/Folio.Api.csproj).
+**Start here:** [setup](../onboarding/02-local-setup.md), [client manifest](https://github.com/elirc/folio-app/blob/main/client/package.json), [API project](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Folio.Api.csproj).
 
 **Acceptance:**
 - Record SDK, Node, and pnpm versions and the files that establish project requirements.
@@ -56,7 +56,7 @@ Use three terminals: API, client, and commands. Create a page in the browser, re
 
 **Story:** As a documentation user, I want to create and find a page so that I understand the product I will change.
 
-**Start here:** [getting started](../../folio-app/docs/getting-started.md).
+**Start here:** [getting started](https://github.com/elirc/folio-app/blob/main/docs/getting-started.md).
 
 **Acceptance:**
 - Log in as Ada, create a practice page and paragraph, rename it, and find it again.
@@ -75,7 +75,7 @@ Use three terminals: API, client, and commands. Create a page in the browser, re
 
 **Story:** As a developer investigating a rename, I want to understand its HTTP exchange so that I know where to begin debugging.
 
-**Start here:** [code tour](../onboarding/03-code-tour.md), [typed endpoints](../../folio-app/client/src/api/folio.ts).
+**Start here:** [code tour](../onboarding/03-code-tour.md), [typed endpoints](https://github.com/elirc/folio-app/blob/main/client/src/api/folio.ts).
 
 **Acceptance:**
 - Capture the rename method, path, status, request fields, and response fields without the authorization value.

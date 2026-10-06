@@ -20,7 +20,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As a contributor switching stacks, I want a package map so that I change and test the correct unit of the system.
 
-**Start here:** [Tracer manifest](../../tracer/package.json), [workspace config](../../tracer/pnpm-workspace.yaml), [shared manifest](../../tracer/packages/shared/package.json).
+**Start here:** [Tracer manifest](https://github.com/elirc/tracer/blob/main/package.json), [workspace config](https://github.com/elirc/tracer/blob/main/pnpm-workspace.yaml), [shared manifest](https://github.com/elirc/tracer/blob/main/packages/shared/package.json).
 
 **Acceptance:**
 - Identify app/package names, dependencies, test scripts, and Turbo's role.
@@ -39,7 +39,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As an issue-tracker user, I want filters to combine predictably so that I see the issues I intended to select.
 
-**Start here:** [filter](../../tracer/packages/shared/src/filter.ts), [filter tests](../../tracer/packages/shared/src/filter.test.ts), [store](../../tracer/packages/shared/src/store.ts).
+**Start here:** [filter](https://github.com/elirc/tracer/blob/main/packages/shared/src/filter.ts), [filter tests](https://github.com/elirc/tracer/blob/main/packages/shared/src/filter.test.ts), [store](https://github.com/elirc/tracer/blob/main/packages/shared/src/store.ts).
 
 **Acceptance:**
 - Extract the actual filter contract and explain combinations of at least two supported criteria.
@@ -58,7 +58,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As a workflow operator, I want known secrets removed from nested run payloads so that useful debugging output does not reveal credentials.
 
-**Start here:** [Relay redaction](../../relay/packages/shared/src/redact.ts), [redaction tests](../../relay/packages/shared/src/redact.test.ts).
+**Start here:** [Relay redaction](https://github.com/elirc/relay/blob/main/packages/shared/src/redact.ts), [redaction tests](https://github.com/elirc/relay/blob/main/packages/shared/src/redact.test.ts).
 
 **Acceptance:**
 - Define deterministic handling when one known secret is a substring of another; no suffix of the longer secret leaks because the shorter one was replaced first.
@@ -77,7 +77,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As an offline issue-tracker user, I want duplicate delivery to converge so that reconnecting does not duplicate my work.
 
-**Start here:** [Tracer store](../../tracer/packages/shared/src/store.ts), [store tests](../../tracer/packages/shared/src/store.test.ts), [sync types](../../tracer/packages/shared/src/sync.ts).
+**Start here:** [Tracer store](https://github.com/elirc/tracer/blob/main/packages/shared/src/store.ts), [store tests](https://github.com/elirc/tracer/blob/main/packages/shared/src/store.test.ts), [sync types](https://github.com/elirc/tracer/blob/main/packages/shared/src/sync.ts).
 
 **Acceptance:**
 - Explain operation identity, sequence handling, and the actual duplicate policy from the source.
@@ -96,7 +96,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As a collaborative writer, I want concurrent text operations to converge so that replicas eventually show the same document.
 
-**Start here:** [Folio RGA](../../folio/packages/crdt-101/src/rga.ts), [convergence tests](../../folio/packages/crdt-101/src/convergence.test.ts), [resurrection tests](../../folio/packages/crdt-101/src/resurrection.test.ts).
+**Start here:** [Folio RGA](https://github.com/elirc/folio/blob/main/packages/crdt-101/src/rga.ts), [convergence tests](https://github.com/elirc/folio/blob/main/packages/crdt-101/src/convergence.test.ts), [resurrection tests](https://github.com/elirc/folio/blob/main/packages/crdt-101/src/resurrection.test.ts).
 
 **Acceptance:**
 - Explain immutable operation ids, tombstones, and pending causal dependencies using two replicas.
@@ -115,7 +115,7 @@ Read Tracer's workspace and package manifests. Install in the Tracer project roo
 
 **Story:** As a design reviewer, I want a grounded comparison so that I choose consistency mechanisms according to the product's needs.
 
-**Start here:** Your Folio App version work, [Tracer store](../../tracer/packages/shared/src/store.ts), [Folio RGA](../../folio/packages/crdt-101/src/rga.ts).
+**Start here:** Your Folio App version work, [Tracer store](https://github.com/elirc/tracer/blob/main/packages/shared/src/store.ts), [Folio RGA](https://github.com/elirc/folio/blob/main/packages/crdt-101/src/rga.ts).
 
 **Acceptance:**
 - Compare rejection on stale version, sequenced mutation replay, and CRDT operation merging using one user scenario each.

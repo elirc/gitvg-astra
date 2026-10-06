@@ -18,7 +18,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As a member, I want starred nested pages to remain reachable so that reorganizing documentation does not hide my shortcuts.
 
-**Start here:** [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx), [router test helper](../../folio-app/client/src/test/renderWithRouter.tsx).
+**Start here:** [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx), [router test helper](https://github.com/elirc/folio-app/blob/main/client/src/test/renderWithRouter.tsx).
 
 **Acceptance:**
 - Cover a starred grandchild under unstarred ancestors and two pages with the same title.
@@ -37,7 +37,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As a member opening my inbox, I want loading and failure feedback so that I do not confuse an unavailable inbox with zero notifications.
 
-**Start here:** [NotificationInbox](../../folio-app/client/src/components/NotificationInbox.tsx), [inbox tests](../../folio-app/client/src/components/NotificationInbox.test.tsx).
+**Start here:** [NotificationInbox](https://github.com/elirc/folio-app/blob/main/client/src/components/NotificationInbox.tsx), [inbox tests](https://github.com/elirc/folio-app/blob/main/client/src/components/NotificationInbox.test.tsx).
 
 **Acceptance:**
 - Show distinct loading, empty, success, and recoverable-error states, retaining existing states that already satisfy this.
@@ -56,7 +56,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As an editor, I want title validation before saving so that I can correct my input without losing it.
 
-**Start here:** [PageView](../../folio-app/client/src/components/PageView.tsx), [PageDtos](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs).
+**Start here:** [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx), [PageDtos](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs).
 
 **Acceptance:**
 - Show a character count and an associated message for a blank/whitespace title or a title over 400 characters.
@@ -75,7 +75,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As a keyboard user, I want focus managed inside Quick Open so that I can choose a page and return to my previous place.
 
-**Start here:** [QuickOpenModal](../../folio-app/client/src/components/QuickOpenModal.tsx), [WorkspacePage](../../folio-app/client/src/pages/WorkspacePage.tsx).
+**Start here:** [QuickOpenModal](https://github.com/elirc/folio-app/blob/main/client/src/components/QuickOpenModal.tsx), [WorkspacePage](https://github.com/elirc/folio-app/blob/main/client/src/pages/WorkspacePage.tsx).
 
 **Acceptance:**
 - Opening focuses search; Tab/Shift+Tab remain within the modal's interactive controls.
@@ -94,7 +94,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As a keyboard user, I want result selection to stay valid when search results change so that Enter opens only an actual current result.
 
-**Start here:** [QuickOpenModal](../../folio-app/client/src/components/QuickOpenModal.tsx), [modal tests](../../folio-app/client/src/components/QuickOpenModal.test.tsx).
+**Start here:** [QuickOpenModal](https://github.com/elirc/folio-app/blob/main/client/src/components/QuickOpenModal.tsx), [modal tests](https://github.com/elirc/folio-app/blob/main/client/src/components/QuickOpenModal.test.tsx).
 
 **Acceptance:**
 - Arrow keys with zero results cause no navigation and leave selection in a valid empty state.
@@ -113,7 +113,7 @@ Inspect the empty Favorites change and the Quick Open modal. Draw each UI state 
 
 **Story:** As a member using a narrow screen and keyboard, I want the edited UI to work together so that individual improvements do not create a broken journey.
 
-**Start here:** [Sidebar](../../folio-app/client/src/components/Sidebar.tsx), your changed inbox/title/modal components.
+**Start here:** [Sidebar](https://github.com/elirc/folio-app/blob/main/client/src/components/Sidebar.tsx), your changed inbox/title/modal components.
 
 **Acceptance:**
 - Complete login, page navigation, valid rename, inbox open, and Quick Open without a mouse.

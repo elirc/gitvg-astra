@@ -16,9 +16,9 @@ Folio App does not currently include a dedicated Playwright E2E harness or a cli
 
 ## Existing harnesses
 
-[FolioApiFactory](../../folio-app/server/Folio.Tests/FolioApiFactory.cs) holds an open SQLite in-memory connection for the factory lifetime. That makes the database available to multiple request-scoped DbContexts. Startup uses migrations and Development seed data. `CreateAuthenticatedClient` exercises real login and adds a bearer token. A new factory per mutating test isolates state; use the existing read-only fixture pattern where appropriate.
+[FolioApiFactory](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/FolioApiFactory.cs) holds an open SQLite in-memory connection for the factory lifetime. That makes the database available to multiple request-scoped DbContexts. Startup uses migrations and Development seed data. `CreateAuthenticatedClient` exercises real login and adds a bearer token. A new factory per mutating test isolates state; use the existing read-only fixture pattern where appropriate.
 
-[fetchMock.ts](../../folio-app/client/src/test/fetchMock.ts) maps method/path combinations to responses. A mocked 204 has no body. [authTestUtils.ts](../../folio-app/client/src/test/authTestUtils.ts) provides session helpers. Clean up stubs and session state after each case so one test cannot authenticate another accidentally.
+[fetchMock.ts](https://github.com/elirc/folio-app/blob/main/client/src/test/fetchMock.ts) maps method/path combinations to responses. A mocked 204 has no body. [authTestUtils.ts](https://github.com/elirc/folio-app/blob/main/client/src/test/authTestUtils.ts) provides session helpers. Clean up stubs and session state after each case so one test cannot authenticate another accidentally.
 
 ## Write acceptance examples before mechanics
 

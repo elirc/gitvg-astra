@@ -7,7 +7,7 @@ Debugging is narrowing the difference between what should happen and what did ha
 Suppose the user types `install`, then `architecture`, and the dropdown later shows Installation. First record the exact keystrokes, workspace, and whether the behavior happens with a slow API. Do not label it a database defect before looking at requests.
 
 1. In browser Network, record request start and finish order. Confirm the query strings actually differ.
-2. Locate [SearchBox](../../folio-app/client/src/components/SearchBox.tsx). Read its effect dependencies, debounce timer, abort controller, and catch branch.
+2. Locate [SearchBox](https://github.com/elirc/folio-app/blob/main/client/src/components/SearchBox.tsx). Read its effect dependencies, debounce timer, abort controller, and catch branch.
 3. Form a hypothesis: a response for an obsolete query updates the latest view, or a failed query leaves previous results visible. These are different mechanisms.
 4. Reproduce each mechanism separately with controlled promises or a deterministic error response. A mock that ignores the signal is useful for testing the component's own guard; label this setup accurately.
 5. Define the desired UI: canceled requests are quiet; a real failure gets an error state; obsolete results cannot masquerade as the latest query's results.

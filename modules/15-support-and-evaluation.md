@@ -20,7 +20,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a support engineer, I want to distinguish retrieval from answer evaluation so that I can locate the cause of an unsupported answer.
 
-**Start here:** [retrieval](../../harbor/packages/rag/src/retrieve.ts), [eval types](../../harbor/packages/eval/src/types.ts), [graders](../../harbor/packages/eval/src/graders.ts).
+**Start here:** [retrieval](https://github.com/elirc/harbor/blob/main/packages/rag/src/retrieve.ts), [eval types](https://github.com/elirc/harbor/blob/main/packages/eval/src/types.ts), [graders](https://github.com/elirc/harbor/blob/main/packages/eval/src/graders.ts).
 
 **Acceptance:**
 - Explain vector ranking, rank fusion, relevance threshold, and the actual metric definitions.
@@ -39,7 +39,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a support customer, I want unsupported questions recognized so that the assistant does not invent an answer from weak context.
 
-**Start here:** [threshold tests](../../harbor/packages/rag/src/threshold.test.ts), [retrieval tests](../../harbor/packages/rag/src/retrieve.test.ts), [dataset](../../harbor/packages/eval/src/dataset.ts).
+**Start here:** [threshold tests](https://github.com/elirc/harbor/blob/main/packages/rag/src/threshold.test.ts), [retrieval tests](https://github.com/elirc/harbor/blob/main/packages/rag/src/retrieve.test.ts), [dataset](https://github.com/elirc/harbor/blob/main/packages/eval/src/dataset.ts).
 
 **Acceptance:**
 - Add synthetic empty-corpus, below-threshold, and boundary-score cases not already covered.
@@ -58,7 +58,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a developer changing support automation, I want the evaluation itself tested so that a green score cannot result from a grader that accepts everything.
 
-**Start here:** [grader meta-tests](../../harbor/packages/eval/src/graders.meta.test.ts), [grader tests](../../harbor/packages/eval/src/graders.test.ts), [runner tests](../../harbor/packages/eval/src/runner.test.ts).
+**Start here:** [grader meta-tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/graders.meta.test.ts), [grader tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/graders.test.ts), [runner tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/runner.test.ts).
 
 **Acceptance:**
 - Add a missing clearly-correct/clearly-incorrect pair for one existing grader's documented contract.
@@ -77,7 +77,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a support operator, I want retrieved text treated as evidence so that a document's embedded instruction cannot authorize an unrelated action.
 
-**Start here:** [injection tests](../../harbor/packages/eval/src/injection.test.ts), [autonomy tests](../../harbor/packages/eval/src/autonomy.test.ts), [bot tests](../../harbor/packages/eval/src/bot.test.ts).
+**Start here:** [injection tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/injection.test.ts), [autonomy tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/autonomy.test.ts), [bot tests](https://github.com/elirc/harbor/blob/main/packages/eval/src/bot.test.ts).
 
 **Acceptance:**
 - Add a synthetic retrieved snippet asking for an action outside the configured support policy.
@@ -96,7 +96,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a support lead, I want SLA status to follow explicit time and assignment rules so that urgent conversations are not misclassified.
 
-**Start here:** [Harbor Net SLA policies](../../harbor-net/src/Harbor.Infrastructure/SlaPolicies.cs), [SLA breaches](../../harbor-net/src/Harbor.Infrastructure/SlaBreaches.cs), [assignment](../../harbor-net/src/Harbor.Infrastructure/AutoAssigner.cs), [tests](../../harbor-net/tests/Harbor.Tests).
+**Start here:** [Harbor Net SLA policies](https://github.com/elirc/harbor-net/blob/main/src/Harbor.Infrastructure/SlaPolicies.cs), [SLA breaches](https://github.com/elirc/harbor-net/blob/main/src/Harbor.Infrastructure/SlaBreaches.cs), [assignment](https://github.com/elirc/harbor-net/blob/main/src/Harbor.Infrastructure/AutoAssigner.cs), [tests](https://github.com/elirc/harbor-net/tree/main/tests/Harbor.Tests).
 
 **Acceptance:**
 - Choose one implemented SLA clock/breach rule and document its actual timezone/pause assumptions.
@@ -115,7 +115,7 @@ Read `retrieveRelevant`, its threshold tests, and the evaluation dataset schema.
 
 **Story:** As a support product owner, I want evidence and limits for an automation change so that I can decide whether it is ready for a controlled trial.
 
-**Start here:** [eval regression code](../../harbor/packages/eval/src/regression.ts), your new cases, [ADR template](../templates/adr.md).
+**Start here:** [eval regression code](https://github.com/elirc/harbor/blob/main/packages/eval/src/regression.ts), your new cases, [ADR template](../templates/adr.md).
 
 **Acceptance:**
 - Compare baseline and changed behavior on the same deterministic dataset, reporting per-case regressions as well as aggregate results.

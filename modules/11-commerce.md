@@ -20,7 +20,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a merchant, I want invalid monetary inputs rejected so that extreme or malformed values cannot silently lose precision.
 
-**Start here:** [Storefront money](../../storefront/lib/money.ts), [money tests](../../storefront/lib/money.test.ts).
+**Start here:** [Storefront money](https://github.com/elirc/storefront/blob/main/lib/money.ts), [money tests](https://github.com/elirc/storefront/blob/main/lib/money.test.ts).
 
 **Acceptance:**
 - Specify safe-integer minor units and ensure constructor/arithmetic results reject unsafe or nonfinite values.
@@ -39,7 +39,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a shopper, I want price and availability displayed accurately so that a product card does not promise an unavailable variant.
 
-**Start here:** [catalog service](../../storefront/server/services/catalog.ts), [catalog tests](../../storefront/server/services/catalog.test.ts), [product data](../../storefront/server/data/products.ts).
+**Start here:** [catalog service](https://github.com/elirc/storefront/blob/main/server/services/catalog.ts), [catalog tests](https://github.com/elirc/storefront/blob/main/server/services/catalog.test.ts), [product data](https://github.com/elirc/storefront/blob/main/server/data/products.ts).
 
 **Acceptance:**
 - Explain cheapest variant, priceVaries, inStock, and image fallback behavior from current code.
@@ -58,7 +58,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a merchant changing catalog data, I want cached reads to update under their policy so that shoppers do not see indefinitely stale information.
 
-**Start here:** [Bazaar cache policy](../../bazaar/packages/cache/src/policy.ts), [cache implementation](../../bazaar/packages/cache/src/index.ts), [cache tests](../../bazaar/packages/cache/src/index.test.ts).
+**Start here:** [Bazaar cache policy](https://github.com/elirc/bazaar/blob/main/packages/cache/src/policy.ts), [cache implementation](https://github.com/elirc/bazaar/blob/main/packages/cache/src/index.ts), [cache tests](https://github.com/elirc/bazaar/blob/main/packages/cache/src/index.test.ts).
 
 **Acceptance:**
 - Trace one implemented catalog write to its actual invalidation mechanism and reader.
@@ -77,7 +77,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a shopper, I want checkout to handle a failed charge coherently so that I do not receive an order for an unpaid purchase or lose stock indefinitely.
 
-**Start here:** [Agora Net checkout](../../agora-net/src/Agora.Infrastructure/Services/CheckoutService.cs), [fake gateway](../../agora-net/src/Agora.Infrastructure/Services/FakePaymentGateway.cs), [tests](../../agora-net/tests/Agora.Tests).
+**Start here:** [Agora Net checkout](https://github.com/elirc/agora-net/blob/main/src/Agora.Infrastructure/Services/CheckoutService.cs), [fake gateway](https://github.com/elirc/agora-net/blob/main/src/Agora.Infrastructure/Services/FakePaymentGateway.cs), [tests](https://github.com/elirc/agora-net/tree/main/tests/Agora.Tests).
 
 **Acceptance:**
 - Map implemented checkout phases and identify the database/external-call boundary.
@@ -96,7 +96,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a frontend contributor, I want to understand contract drift checks so that a server DTO change cannot quietly break the client.
 
-**Start here:** [Agora web scripts](../../agora/web/package.json), [Agora contracts](../../agora/src/Agora.Contracts), [Bazaar App catalog DTOs](../../bazaar-app/server/Bazaar.Api/Contracts/CatalogDtos.cs), [Bazaar App client](../../bazaar-app/client/src).
+**Start here:** [Agora web scripts](https://github.com/elirc/agora/blob/main/web/package.json), [Agora contracts](https://github.com/elirc/agora/tree/main/src/Agora.Contracts), [Bazaar App catalog DTOs](https://github.com/elirc/bazaar-app/blob/main/server/Bazaar.Api/Contracts/CatalogDtos.cs), [Bazaar App client](https://github.com/elirc/bazaar-app/tree/main/client/src).
 
 **Acceptance:**
 - Trace one catalog field from response definition to UI in each app.
@@ -115,7 +115,7 @@ Read Storefront's `money` constructor and catalog view-model mapping. Then draw 
 
 **Story:** As a commerce reviewer, I want evidence about failure and retry behavior so that a successful checkout demo does not hide data-integrity risks.
 
-**Start here:** [Bazaar App checkout endpoints](../../bazaar-app/server/Bazaar.Api/Endpoints/CheckoutEndpoints.cs), AST-070 evidence, [review template](../templates/review.md).
+**Start here:** [Bazaar App checkout endpoints](https://github.com/elirc/bazaar-app/blob/main/server/Bazaar.Api/Endpoints/CheckoutEndpoints.cs), AST-070 evidence, [review template](../templates/review.md).
 
 **Acceptance:**
 - Compare where validation, authorization, price authority, stock changes, and payment effects live in two implemented commerce paths.

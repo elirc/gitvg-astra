@@ -18,10 +18,10 @@ Keep tag deletion, renaming, color selection, bulk import, full-text ranking, an
 
 ### Starting points
 
-- [Page entity](../../folio-app/server/Folio.Domain/Entities/Page.cs) and [DbContext](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
-- [PageAuthorization](../../folio-app/server/Folio.Api/Auth/PageAuthorization.cs) and [SearchService](../../folio-app/server/Folio.Api/Services/SearchService.cs).
-- [PageView](../../folio-app/client/src/components/PageView.tsx) and [SearchPage](../../folio-app/client/src/components/SearchPage.tsx).
-- [API factory](../../folio-app/server/Folio.Tests/FolioApiFactory.cs) and existing component test helpers.
+- [Page entity](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs) and [DbContext](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs).
+- [PageAuthorization](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/PageAuthorization.cs) and [SearchService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/SearchService.cs).
+- [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx) and [SearchPage](https://github.com/elirc/folio-app/blob/main/client/src/components/SearchPage.tsx).
+- [API factory](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/FolioApiFactory.cs) and existing component test helpers.
 
 ### Acceptance scenarios
 
@@ -56,10 +56,10 @@ The project already has saved views. Your work extends that feature; first prove
 
 ### Starting points
 
-- [Saved-view rules tests](../../tracer-net/tests/Tracer.Tests/Unit/SavedViewRulesTests.cs).
-- [Saved-view API tests](../../tracer-net/tests/Tracer.Tests/Integration/SavedViewsApiTests.cs).
-- [API source](../../tracer-net/src/Tracer.Api) and [domain source](../../tracer-net/src/Tracer.Domain), searched for `SavedView`.
-- [Getting started](../../tracer-net/docs/getting-started.md) and [API reference](../../tracer-net/docs/api-reference.md).
+- [Saved-view rules tests](https://github.com/elirc/tracer-net/blob/main/tests/Tracer.Tests/Unit/SavedViewRulesTests.cs).
+- [Saved-view API tests](https://github.com/elirc/tracer-net/blob/main/tests/Tracer.Tests/Integration/SavedViewsApiTests.cs).
+- [API source](https://github.com/elirc/tracer-net/tree/main/src/Tracer.Api) and [domain source](https://github.com/elirc/tracer-net/tree/main/src/Tracer.Domain), searched for `SavedView`.
+- [Getting started](https://github.com/elirc/tracer-net/blob/main/docs/getting-started.md) and [API reference](https://github.com/elirc/tracer-net/blob/main/docs/api-reference.md).
 
 ### Acceptance and boundaries
 
@@ -87,10 +87,10 @@ First inspect whether a preview/quote operation already exists. If it does, reta
 
 ### Starting points
 
-- [CheckoutService](../../agora-net/src/Agora.Infrastructure/Services/CheckoutService.cs).
-- [TaxService](../../agora-net/src/Agora.Infrastructure/Services/TaxService.cs) and [Money](../../agora-net/src/Agora.Domain/Common/Money.cs).
-- [FakePaymentGateway](../../agora-net/src/Agora.Infrastructure/Services/FakePaymentGateway.cs).
-- [Test projects](../../agora-net/tests/Agora.Tests) and [API reference](../../agora-net/docs/api-reference.md).
+- [CheckoutService](https://github.com/elirc/agora-net/blob/main/src/Agora.Infrastructure/Services/CheckoutService.cs).
+- [TaxService](https://github.com/elirc/agora-net/blob/main/src/Agora.Infrastructure/Services/TaxService.cs) and [Money](https://github.com/elirc/agora-net/blob/main/src/Agora.Domain/Common/Money.cs).
+- [FakePaymentGateway](https://github.com/elirc/agora-net/blob/main/src/Agora.Infrastructure/Services/FakePaymentGateway.cs).
+- [Test projects](https://github.com/elirc/agora-net/tree/main/tests/Agora.Tests) and [API reference](https://github.com/elirc/agora-net/blob/main/docs/api-reference.md).
 
 ### Acceptance scenarios
 

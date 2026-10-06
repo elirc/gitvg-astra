@@ -8,7 +8,7 @@ Start with [your first day](onboarding/01-first-day.md), then [run the applicati
 
 You can write a function, use a terminal a little, and recognize HTML. You may never have opened a pull request, run a migration, debugged an HTTP request, or written an integration test. Those are taught here. If loops, objects, or functions are still unfamiliar, do the short exercises in [Foundations](handbook/foundations.md) before Module 02.
 
-The primary application is [Folio App](../folio-app/README.md): React + TypeScript in the browser, C# + ASP.NET Core on the server, and SQLite for storage. Its pages, comments, search, and favorites are understandable without specialist business knowledge. Later modules transfer those skills into the other applications.
+The primary application is [Folio App](https://github.com/elirc/folio-app/blob/main/README.md): React + TypeScript in the browser, C# + ASP.NET Core on the server, and SQLite for storage. Its pages, comments, search, and favorites are understandable without specialist business knowledge. Later modules transfer those skills into the other applications.
 
 ## Start here, in order
 
@@ -46,6 +46,18 @@ Estimates are planning aids, not performance targets. At 10 hours per week, the 
 - [Reusable templates](templates/README.md) for PRs, stories, reviews, decisions, and learning notes.
 - [Source audit](SOURCE-AUDIT.md): what was inspected and what has not been runtime-verified.
 
-The workspace contains independent nested Git repositories. In the inspected checkout, `git` from the workspace root resolves to a repository above this directory. Read the boundary checks before staging anything. Keep all Astra learning materials under this folder; make application exercises on a branch inside the relevant application repository.
+## Set up the workspace
+
+> Status (2026-10-06): this repository is a standalone copy of the `astra/` folder in [elirc/gitvg](https://github.com/elirc/gitvg). Links to application source now point at each application's own repository (`github.com/elirc/<project>`), so they resolve from GitHub as well as locally.
+
+The commands in this curriculum run from a **workspace root**: one folder holding this repository, cloned as `astra`, next to the application repositories you need. For the core path you need only Folio App:
+
+```powershell
+# Working directory: an empty folder of your choice; this becomes the workspace root
+git clone https://github.com/elirc/gitvg-astra astra
+git clone https://github.com/elirc/folio-app folio-app
+```
+
+Clone an elective's repositories the same way (for example `tracer-net` and `relay-app` for Module 13), using the folder names in the [repository map](REPO-MAP.md). The workspace root itself is not a Git repository, so never run `git add` from it. Keep all Astra learning materials under `astra`; make application exercises on a branch inside the relevant application repository.
 
 To check the curriculum's local links and story structure, run `python astra/scripts/check_curriculum.py` from the workspace root. It requires only Python's standard library and does not run or change the applications.

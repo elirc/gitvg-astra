@@ -40,13 +40,13 @@ dotnet test Folio.slnx --filter 'FullyQualifiedName~MigrationGuardTests'
 
 Use the actual migration name for your story. Inspect both migration directions and the snapshot. Review data loss, nullability, default values, indexes, foreign keys, and provider-specific SQL. The design-time factory currently uses its own SQLite connection string; before any database-update command, verify which connection the tooling will target. The normal app startup migration path is distinct from generating a migration file.
 
-An `EnsureCreated` database bypasses migration history. A model that works there can still fail on upgrade. Folio's existing [migration guard](../../folio-app/server/Folio.Tests/MigrationGuardTests.cs) checks model/snapshot agreement, but a real old-data upgrade fixture is still needed for backfill semantics.
+An `EnsureCreated` database bypasses migration history. A model that works there can still fail on upgrade. Folio's existing [migration guard](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/MigrationGuardTests.cs) checks model/snapshot agreement, but a real old-data upgrade fixture is still needed for backfill semantics.
 
 ## Authenticate, authorize, and filter
 
 Authentication establishes who the caller is. Authorization decides whether that caller can perform this action on this resource. The authenticated member id should come from server-resolved claims, not an arbitrary `memberId` supplied in a favorite request.
 
-Read [PageAuthorization](../../folio-app/server/Folio.Api/Auth/PageAuthorization.cs) and the [permission tests](../../folio-app/server/Folio.Tests/PermissionMatrixTests.cs). Existing rules include foreign-workspace 404s, private pages restricted to Owners, Viewer writes denied, and comments/favorites allowed with read access. "All writes require Editor" would therefore be an incorrect simplification for this application.
+Read [PageAuthorization](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/PageAuthorization.cs) and the [permission tests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/PermissionMatrixTests.cs). Existing rules include foreign-workspace 404s, private pages restricted to Owners, Viewer writes denied, and comments/favorites allowed with read access. "All writes require Editor" would therefore be an incorrect simplification for this application.
 
 Use both direct and indirect tests: page detail, tree, favorites list, search, quick-open, backlinks, export, and notifications can all reveal information. A hidden edit button is a helpful cue but cannot stop a forged HTTP request. Recheck visibility when listing favorites so revoking access removes a page from the result immediately.
 

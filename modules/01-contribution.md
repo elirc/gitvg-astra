@@ -18,7 +18,7 @@ Complete [the FavoritesList first change](../onboarding/05-first-change.md). Bef
 
 **Story:** As a new member, I want an empty Favorites explanation so that I know how to add my first favorite.
 
-**Start here:** [first-change lab](../onboarding/05-first-change.md), [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx).
+**Start here:** [first-change lab](../onboarding/05-first-change.md), [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx).
 
 **Acceptance:**
 - Show a section label and truthful instruction when there are no favorites.
@@ -113,7 +113,7 @@ Complete [the FavoritesList first change](../onboarding/05-first-change.md). Bef
 
 **Story:** As a team lead, I want a large favorites change divided into reviewable slices so that a junior can progress with feedback.
 
-**Start here:** [story template](../templates/user-story.md), [shared-favorite architecture](../../folio-app/docs/architecture.md).
+**Start here:** [story template](../templates/user-story.md), [shared-favorite architecture](https://github.com/elirc/folio-app/blob/main/docs/architecture.md).
 
 **Acceptance:**
 - Turn "make favorites personal and reliable" into discovery, data, API, UI, and verification slices.

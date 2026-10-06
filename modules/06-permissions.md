@@ -18,7 +18,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As a reviewer, I want a caller/action matrix so that access decisions can be assessed without scattered assumptions.
 
-**Start here:** [PageAuthorization](../../folio-app/server/Folio.Api/Auth/PageAuthorization.cs), [PermissionMatrixTests](../../folio-app/server/Folio.Tests/PermissionMatrixTests.cs).
+**Start here:** [PageAuthorization](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/PageAuthorization.cs), [PermissionMatrixTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/PermissionMatrixTests.cs).
 
 **Acceptance:**
 - Map Owner/Editor/Viewer, same/foreign workspace, Private/Workspace/Public, and View/Edit for representative actions.
@@ -37,7 +37,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As a member with an expired session, I want to return to login cleanly so that I do not continue acting under stale identity.
 
-**Start here:** [AuthContext](../../folio-app/client/src/auth/AuthContext.tsx), [RequireAuth](../../folio-app/client/src/auth/RequireAuth.tsx), [client](../../folio-app/client/src/api/client.ts).
+**Start here:** [AuthContext](https://github.com/elirc/folio-app/blob/main/client/src/auth/AuthContext.tsx), [RequireAuth](https://github.com/elirc/folio-app/blob/main/client/src/auth/RequireAuth.tsx), [client](https://github.com/elirc/folio-app/blob/main/client/src/api/client.ts).
 
 **Acceptance:**
 - A mocked 401 clears the client token and persisted session and routes through the existing auth guard.
@@ -56,7 +56,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As a page owner, I want denied operations to preserve stored content so that a correct status code cannot hide a partial mutation.
 
-**Start here:** [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [PermissionGating tests](../../folio-app/client/src/components/PermissionGating.test.tsx), [API factory](../../folio-app/server/Folio.Tests/FolioApiFactory.cs).
+**Start here:** [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [PermissionGating tests](https://github.com/elirc/folio-app/blob/main/client/src/components/PermissionGating.test.tsx), [API factory](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/FolioApiFactory.cs).
 
 **Acceptance:**
 - A Viewer directly attempting a rename or summary update gets the expected denial.
@@ -75,7 +75,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As an owner of a private page, I want its title hidden from unauthorized lists so that search and navigation cannot reveal it.
 
-**Start here:** [SearchPermissionTests](../../folio-app/server/Folio.Tests/SearchPermissionTests.cs), [LinkLeakTests](../../folio-app/server/Folio.Tests/LinkLeakTests.cs), [SearchService](../../folio-app/server/Folio.Api/Services/SearchService.cs).
+**Start here:** [SearchPermissionTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/SearchPermissionTests.cs), [LinkLeakTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/LinkLeakTests.cs), [SearchService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/SearchService.cs).
 
 **Acceptance:**
 - Trace filtering in tree, search, quick-open, favorites, and backlinks.
@@ -94,7 +94,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As a page owner, I want a revoked public link to stop working so that changing visibility actually removes anonymous access.
 
-**Start here:** [PublicController](../../folio-app/server/Folio.Api/Controllers/PublicController.cs), [SharingSearchTests](../../folio-app/server/Folio.Tests/SharingSearchTests.cs).
+**Start here:** [PublicController](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PublicController.cs), [SharingSearchTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/SharingSearchTests.cs).
 
 **Acceptance:**
 - An explicitly public local page is readable without a token through its slug.
@@ -113,7 +113,7 @@ Use separate browser profiles or sessions for Ada and Linus; login state is stor
 
 **Story:** As a team lead, I want the summary and future favorites changes reviewed against existing policy so that features do not introduce inconsistent access rules.
 
-**Start here:** Your summary endpoint, [current member accessor](../../folio-app/server/Folio.Api/Auth/CurrentMember.cs), [review template](../templates/review.md).
+**Start here:** Your summary endpoint, [current member accessor](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/CurrentMember.cs), [review template](../templates/review.md).
 
 **Acceptance:**
 - Identify the source of caller identity and the resource's workspace before reviewing permission decisions.

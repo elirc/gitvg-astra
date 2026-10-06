@@ -1,14 +1,14 @@
 # Guided lab: make the empty favorites area useful
 
-The current [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx) flattens the page tree, filters `isFavorite`, and returns `null` when there are no favorites. Your first change is small: help a new user discover how to add their first favorite.
+The current [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx) flattens the page tree, filters `isFavorite`, and returns `null` when there are no favorites. Your first change is small: help a new user discover how to add their first favorite.
 
 **User story:** As a new workspace member, I want an explanation in an empty Favorites section so that I know how to make useful pages easy to find.
 
 ## Before coding
 
 1. Complete setup and the Git boundary checks.
-2. Open the component and its caller in [Sidebar](../../folio-app/client/src/components/Sidebar.tsx).
-3. Inspect the existing star control in [PageView](../../folio-app/client/src/components/PageView.tsx) so the new wording matches a real action.
+2. Open the component and its caller in [Sidebar](https://github.com/elirc/folio-app/blob/main/client/src/components/Sidebar.tsx).
+3. Inspect the existing star control in [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx) so the new wording matches a real action.
 4. Predict the JSX that renders when the input tree is empty, contains only unstarred pages, and contains a starred descendant.
 5. Create a contribution branch inside `folio-app`.
 

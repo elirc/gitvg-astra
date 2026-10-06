@@ -15,7 +15,7 @@ const pages: PracticePage[] = [
 const titles = pages.filter(page => page.favorite).map(page => page.title);
 ```
 
-Predict `titles` before running it. `filter` selects elements; `map` transforms them. Neither call above changes the source array. Changing `page.favorite` inside the callback would still mutate the object; a new array does not automatically deep-copy its elements. Find `flatMap` in [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx) and explain why recursion is needed for nested pages.
+Predict `titles` before running it. `filter` selects elements; `map` transforms them. Neither call above changes the source array. Changing `page.favorite` inside the callback would still mutate the object; a new array does not automatically deep-copy its elements. Find `flatMap` in [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx) and explain why recursion is needed for nested pages.
 
 **Practice:** Write `countFavorites`, then return favorite titles without changing the input. Cover empty input and duplicate titles. Use ids for identity. Next implement the same transformation in C# using `Where`, `Select`, and `Count`, comparing it to a loop. Keep scratch work under your `astra/work` directory.
 
@@ -29,19 +29,19 @@ In the server, `Guid? ParentId` allows a page to have no parent. In TypeScript, 
 
 A pure function returns the same output for the same input and does not change outside state. Filtering favorite titles can be pure. Calling the API, writing to SQLite, logging, and reading the current clock are side effects. Pure functions are easy to test with a table; side effects need a controlled boundary.
 
-Follow `renamePage` in [folio.ts](../../folio-app/client/src/api/folio.ts). It returns a promise for a server response, not a locally renamed page. On the server, `UpdateAsync` coordinates several side effects; extracting every line into a method would not automatically improve its design.
+Follow `renamePage` in [folio.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/folio.ts). It returns a promise for a server response, not a locally renamed page. On the server, `UpdateAsync` coordinates several side effects; extracting every line into a method would not automatically improve its design.
 
 ## Async/await and failure
 
 `await` suspends an asynchronous operation's continuation until its result is available. It does not mean the whole application stops. A rejected promise or thrown asynchronous exception reaches a matching error handler. Two requests can finish in a different order from their start order.
 
-Draw this timeline: query A starts, query B starts, B finishes, A finishes. Which response should the search box display? [useAsync](../../folio-app/client/src/hooks/useAsync.ts) combines an abort signal with an `active` guard. Cancellation is a request to stop; the state guard protects against a response completing after the effect is obsolete.
+Draw this timeline: query A starts, query B starts, B finishes, A finishes. Which response should the search box display? [useAsync](https://github.com/elirc/folio-app/blob/main/client/src/hooks/useAsync.ts) combines an abort signal with an `active` guard. Cancellation is a request to stop; the state guard protects against a response completing after the effect is obsolete.
 
 **Practice:** Make two manually controlled promises in a client test and resolve them in reverse order. Explain why waiting a fixed number of milliseconds is weaker evidence than controlling completion.
 
 ## Reading C# without guessing
 
-Read [PageDtos.cs](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs). `record` defines a data-oriented type. Constructor parameters describe the request fields. `[Required]` and `[MaxLength(400)]` are validation metadata, not comments. `Task<T>` represents an asynchronous result of type T. `CancellationToken` carries a cancellation request through asynchronous operations.
+Read [PageDtos.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs). `record` defines a data-oriented type. Constructor parameters describe the request fields. `[Required]` and `[MaxLength(400)]` are validation metadata, not comments. `Task<T>` represents an asynchronous result of type T. `CancellationToken` carries a cancellation request through asynchronous operations.
 
 Read the controller's switch expression: one service status maps to one HTTP response. Then inspect `ServiceResult<T>` to see how a successful value differs from an error. Do not conflate null, invalid input, forbidden access, and absent resources; the caller needs different behavior for each.
 

@@ -20,7 +20,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As a contributor joining Atlas, I want to understand dependency direction so that a business-rule change stays out of infrastructure code.
 
-**Start here:** [Atlas README](../../atlas/README.md), [Application](../../atlas/src/Atlas.Application), [architecture tests](../../atlas/tests/Atlas.ArchitectureTests).
+**Start here:** [Atlas README](https://github.com/elirc/atlas/blob/main/README.md), [Application](https://github.com/elirc/atlas/tree/main/src/Atlas.Application), [architecture tests](https://github.com/elirc/atlas/tree/main/tests/Atlas.ArchitectureTests).
 
 **Acceptance:**
 - Trace one real use case through Contracts/API/Application/Domain and its persistence or vendor port.
@@ -39,7 +39,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As a payroll maintainer, I want money rules exercised across inputs so that a single happy-path total does not hide rounding or currency errors.
 
-**Start here:** [Atlas Money](../../atlas/src/Atlas.Domain/Money/Money.cs), [property tests](../../atlas/tests/Atlas.Domain.Tests/Money/MoneyPropertyTests.cs), [Atlas Net money tests](../../atlas-net/tests/Atlas.Tests/Domain/MoneyInvariantTests.cs).
+**Start here:** [Atlas Money](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Money/Money.cs), [property tests](https://github.com/elirc/atlas/blob/main/tests/Atlas.Domain.Tests/Money/MoneyPropertyTests.cs), [Atlas Net money tests](https://github.com/elirc/atlas-net/blob/main/tests/Atlas.Tests/Domain/MoneyInvariantTests.cs).
 
 **Acceptance:**
 - State the actual units, allowed operations, currency rules, and rounding boundaries in each model.
@@ -58,7 +58,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As a payroll operator, I want salary changes applied to the correct period so that a later amendment does not rewrite earlier results.
 
-**Start here:** [Atlas employment terms](../../atlas/src/Atlas.Domain/Workforce/EmploymentTerms.cs), [Atlas Net salary record](../../atlas-net/src/Atlas.Domain/Entities/SalaryRecord.cs), [payroll calculator](../../atlas-net/src/Atlas.Domain/Services/PayrollCalculator.cs).
+**Start here:** [Atlas employment terms](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Workforce/EmploymentTerms.cs), [Atlas Net salary record](https://github.com/elirc/atlas-net/blob/main/src/Atlas.Domain/Entities/SalaryRecord.cs), [payroll calculator](https://github.com/elirc/atlas-net/blob/main/src/Atlas.Domain/Services/PayrollCalculator.cs).
 
 **Acceptance:**
 - Derive interval inclusivity and effective-date behavior from one selected implementation.
@@ -77,7 +77,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As a product team testing a new policy variant, I want a synthetic rule pack so that I can add behavior through the intended extension point.
 
-**Start here:** [ICountryRulePack](../../atlas/src/Atlas.Domain/Countries/ICountryRulePack.cs), [existing packs](../../atlas/src/Atlas.Domain/Countries/Packs), [CountryRulePacks](../../atlas/src/Atlas.Domain/Countries/CountryRulePacks.cs).
+**Start here:** [ICountryRulePack](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Countries/ICountryRulePack.cs), [existing packs](https://github.com/elirc/atlas/tree/main/src/Atlas.Domain/Countries/Packs), [CountryRulePacks](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Countries/CountryRulePacks.cs).
 
 **Acceptance:**
 - Introduce a clearly labeled test-only policy variant through the current extension mechanism.
@@ -96,7 +96,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As an approver, I want invalid repeated decisions rejected consistently so that a workflow cannot enter contradictory states.
 
-**Start here:** [ApprovalWorkflow](../../atlas/src/Atlas.Domain/Approvals/ApprovalWorkflow.cs), [transitions](../../atlas/src/Atlas.Domain/Approvals/ApprovalTransitions.cs), [workflow tests](../../atlas/tests/Atlas.Domain.Tests/Approvals/ApprovalWorkflowTests.cs).
+**Start here:** [ApprovalWorkflow](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Approvals/ApprovalWorkflow.cs), [transitions](https://github.com/elirc/atlas/blob/main/src/Atlas.Domain/Approvals/ApprovalTransitions.cs), [workflow tests](https://github.com/elirc/atlas/blob/main/tests/Atlas.Domain.Tests/Approvals/ApprovalWorkflowTests.cs).
 
 **Acceptance:**
 - Draw the implemented states/transitions, including terminal states and error behavior.
@@ -115,7 +115,7 @@ Pick one calculation and one workflow in Atlas. Trace each from an input to an i
 
 **Story:** As an architecture reviewer, I want evidence of change locality so that abstraction choices can be judged by maintenance cost.
 
-**Start here:** Your rule-pack patch, [Atlas Application](../../atlas/src/Atlas.Application), [Atlas Net architecture](../../atlas-net/docs/architecture.md).
+**Start here:** Your rule-pack patch, [Atlas Application](https://github.com/elirc/atlas/tree/main/src/Atlas.Application), [Atlas Net architecture](https://github.com/elirc/atlas-net/blob/main/docs/architecture.md).
 
 **Acceptance:**
 - List changed files by responsibility and explain why each changed for the synthetic policy.

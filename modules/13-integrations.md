@@ -18,7 +18,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As a workflow operator, I want to understand a run's lifecycle so that I can distinguish configuration errors from failed actions.
 
-**Start here:** [Relay App architecture](../../relay-app/docs/architecture.md), [FlowExecutorTests](../../relay-app/server/Relay.Tests/FlowExecutorTests.cs), [fake dispatcher](../../relay-app/server/Relay.Tests/Support/FakeActionDispatcher.cs).
+**Start here:** [Relay App architecture](https://github.com/elirc/relay-app/blob/main/docs/architecture.md), [FlowExecutorTests](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/FlowExecutorTests.cs), [fake dispatcher](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/Support/FakeActionDispatcher.cs).
 
 **Acceptance:**
 - Trace a trigger through run creation, step execution, logs, and final status using real class names.
@@ -37,7 +37,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As an operator, I want bounded retries and a clear final outcome so that failed runs do not continue indefinitely.
 
-**Start here:** [RetriesExecutorTests](../../relay-app/server/Relay.Tests/RetriesExecutorTests.cs), [FakeDelayer](../../relay-app/server/Relay.Tests/Support/FakeDelayer.cs), [step execution contract](../../relay-app/server/Relay.Domain/Execution/StepExecution.cs).
+**Start here:** [RetriesExecutorTests](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/RetriesExecutorTests.cs), [FakeDelayer](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/Support/FakeDelayer.cs), [step execution contract](https://github.com/elirc/relay-app/blob/main/server/Relay.Domain/Execution/StepExecution.cs).
 
 **Acceptance:**
 - Extract the actual attempt-count and delay semantics before extending tests.
@@ -56,7 +56,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As an integration owner, I want forged or replayed webhook requests rejected so that only accepted deliveries trigger work.
 
-**Start here:** [WebhookSignature](../../relay-app/server/Relay.Domain/Security/WebhookSignature.cs), [security boundary tests](../../relay-app/server/Relay.Tests/WebhookSecurityBoundaryTests.cs), [hardening tests](../../relay-app/server/Relay.Tests/WebhookHardeningApiTests.cs).
+**Start here:** [WebhookSignature](https://github.com/elirc/relay-app/blob/main/server/Relay.Domain/Security/WebhookSignature.cs), [security boundary tests](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/WebhookSecurityBoundaryTests.cs), [hardening tests](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/WebhookHardeningApiTests.cs).
 
 **Acceptance:**
 - Document the current signed bytes, timestamp/replay policy, and required headers from source.
@@ -75,7 +75,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As an operator, I want scheduled flows to fire according to the declared time rules so that boundary times do not create missed or duplicate work.
 
-**Start here:** [CronExpression](../../relay-app/server/Relay.Domain/Scheduling/CronExpression.cs), [ScheduleDispatcherTests](../../relay-app/server/Relay.Tests/ScheduleDispatcherTests.cs), [FakeClock](../../relay-app/server/Relay.Tests/Support/FakeClock.cs).
+**Start here:** [CronExpression](https://github.com/elirc/relay-app/blob/main/server/Relay.Domain/Scheduling/CronExpression.cs), [ScheduleDispatcherTests](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/ScheduleDispatcherTests.cs), [FakeClock](https://github.com/elirc/relay-app/blob/main/server/Relay.Tests/Support/FakeClock.cs).
 
 **Acceptance:**
 - State supported scheduling syntax, timezone assumptions, and due-time comparison from the implementation.
@@ -94,7 +94,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As an issue-tracker integrator, I want failed outbound deliveries retried from durable state so that a temporary receiver outage does not lose an event.
 
-**Start here:** [Tracer Net outbox](../../tracer-net/src/Tracer.Api/Webhooks/WebhookOutbox.cs), [delivery tests](../../tracer-net/tests/Tracer.Tests/Integration/WebhookDeliveryApiTests.cs), [stub endpoint](../../tracer-net/tests/Tracer.Tests/Integration/StubWebhookEndpoint.cs).
+**Start here:** [Tracer Net outbox](https://github.com/elirc/tracer-net/blob/main/src/Tracer.Api/Webhooks/WebhookOutbox.cs), [delivery tests](https://github.com/elirc/tracer-net/blob/main/tests/Tracer.Tests/Integration/WebhookDeliveryApiTests.cs), [stub endpoint](https://github.com/elirc/tracer-net/blob/main/tests/Tracer.Tests/Integration/StubWebhookEndpoint.cs).
 
 **Acceptance:**
 - Explain event persistence, attempt tracking, and success/retry transitions in the current outbox.
@@ -113,7 +113,7 @@ Read Relay App's execution tests and its fake clock/delayer/dispatcher. Draw an 
 
 **Story:** As support staff, I want a safe investigation procedure so that I can explain a repeated run without exposing connection secrets or repeating its side effect.
 
-**Start here:** [Relay idempotency](../../relay/apps/engine/src/idempotency.ts), [Relay redaction](../../relay/packages/shared/src/redact.ts), your retry/outbox evidence.
+**Start here:** [Relay idempotency](https://github.com/elirc/relay/blob/main/apps/engine/src/idempotency.ts), [Relay redaction](https://github.com/elirc/relay/blob/main/packages/shared/src/redact.ts), your retry/outbox evidence.
 
 **Acceptance:**
 - Record identifiers needed to distinguish a trigger, run, step attempt, and external delivery.

@@ -8,7 +8,7 @@
 
 ## Guided lab
 
-Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concurrency.md), [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), and [ConcurrencyEdgeTests](../../folio-app/server/Folio.Tests/ConcurrencyEdgeTests.cs). Label existing cases as sequential stale checks or overlapping-write evidence. Do not claim a vulnerability from a hunch: first build the reproduction or record exactly what remains unproven.
+Read [optimistic-concurrency ADR](https://github.com/elirc/folio-app/blob/main/docs/adr/0009-optimistic-concurrency.md), [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), and [ConcurrencyEdgeTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/ConcurrencyEdgeTests.cs). Label existing cases as sequential stale checks or overlapping-write evidence. Do not claim a vulnerability from a hunch: first build the reproduction or record exactly what remains unproven.
 
 <a id="ast-049"></a>
 
@@ -18,7 +18,7 @@ Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concu
 
 **Story:** As an editor, I want stale edits rejected so that an old browser view cannot overwrite a completed newer edit.
 
-**Start here:** [ProductionReadinessTests](../../folio-app/server/Folio.Tests/ProductionReadinessTests.cs), [PageView tests](../../folio-app/client/src/components/PageView.test.tsx).
+**Start here:** [ProductionReadinessTests](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/ProductionReadinessTests.cs), [PageView tests](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.test.tsx).
 
 **Acceptance:**
 - Read a version, complete a newer update, then submit the old version and observe 409.
@@ -37,7 +37,7 @@ Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concu
 
 **Story:** As an editor encountering a conflict, I want my unsaved text preserved so that I can compare and deliberately reapply it.
 
-**Start here:** [PageView](../../folio-app/client/src/components/PageView.tsx), [PageView tests](../../folio-app/client/src/components/PageView.test.tsx).
+**Start here:** [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx), [PageView tests](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.test.tsx).
 
 **Acceptance:**
 - Replace the alert/reload conflict interaction with accessible inline feedback that retains the attempted value.
@@ -56,7 +56,7 @@ Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concu
 
 **Story:** As a maintainer, I want evidence about simultaneous updates so that I do not overstate what the version check guarantees.
 
-**Start here:** [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [DbContext](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs), [API factory](../../folio-app/server/Folio.Tests/FolioApiFactory.cs).
+**Start here:** [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [DbContext](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs), [API factory](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/FolioApiFactory.cs).
 
 **Acceptance:**
 - Inspect whether Version is an EF concurrency token or part of a conditional update, and document the actual protection.
@@ -75,7 +75,7 @@ Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concu
 
 **Story:** As an editor, I want at most one competing edit based on the same version accepted so that overlapping requests cannot silently lose work.
 
-**Start here:** [Page entity](../../folio-app/server/Folio.Domain/Entities/Page.cs), [Block entity](../../folio-app/server/Folio.Domain/Entities/Block.cs), [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [BlockService](../../folio-app/server/Folio.Api/Services/BlockService.cs).
+**Start here:** [Page entity](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs), [Block entity](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Block.cs), [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [BlockService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/BlockService.cs).
 
 **Acceptance:**
 - Add or verify database-enforced concurrency for versioned page/block updates, translating a detected conflict to the existing 409 contract.
@@ -113,7 +113,7 @@ Read [optimistic-concurrency ADR](../../folio-app/docs/adr/0009-optimistic-concu
 
 **Story:** As a maintainer, I want one authoritative favorite model so that future features cannot accidentally revive workspace-wide stars.
 
-**Start here:** [Page](../../folio-app/server/Folio.Domain/Entities/Page.cs), [DbSeeder](../../folio-app/server/Folio.Infrastructure/Persistence/DbSeeder.cs), your migrations and favorite projections.
+**Start here:** [Page](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs), [DbSeeder](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/DbSeeder.cs), your migrations and favorite projections.
 
 **Acceptance:**
 - After backfill/read/write verification, remove the old storage property through a new reviewed migration and update seed behavior.

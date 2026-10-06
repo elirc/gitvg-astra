@@ -18,7 +18,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As an analytics developer, I want to understand acceptance versus processing so that I can explain where an event may be delayed or redelivered.
 
-**Start here:** [Pulse README](../../pulse/README.md), [stream types](../../pulse/packages/stream/src/types.ts), [memory stream](../../pulse/packages/stream/src/memory.ts), [consumer source](../../pulse/apps/consumer/src).
+**Start here:** [Pulse README](https://github.com/elirc/pulse/blob/main/README.md), [stream types](https://github.com/elirc/pulse/blob/main/packages/stream/src/types.ts), [memory stream](https://github.com/elirc/pulse/blob/main/packages/stream/src/memory.ts), [consumer source](https://github.com/elirc/pulse/tree/main/apps/consumer/src).
 
 **Acceptance:**
 - Draw the actual producer/stream/consumer/storage path and identify acknowledgements/checkpoints.
@@ -37,7 +37,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As an analytics customer, I want repeated event delivery counted once within its intended scope so that retries do not inflate reports.
 
-**Start here:** [consumer dedup tests](../../pulse/apps/consumer/src/dedup.test.ts), [stream tests](../../pulse/packages/stream/src/memory.test.ts).
+**Start here:** [consumer dedup tests](https://github.com/elirc/pulse/blob/main/apps/consumer/src/dedup.test.ts), [stream tests](https://github.com/elirc/pulse/blob/main/packages/stream/src/memory.test.ts).
 
 **Acceptance:**
 - Extract the deduplication key/scope and retention assumptions from the implementation.
@@ -56,7 +56,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As an operator, I want malformed events isolated so that one bad payload does not indefinitely stop valid events behind it.
 
-**Start here:** [dead-letter implementation](../../pulse/apps/consumer/src/dlq.ts), [dead-letter tests](../../pulse/apps/consumer/src/dlq.test.ts), [backfill tests](../../pulse/apps/consumer/src/backfill.test.ts).
+**Start here:** [dead-letter implementation](https://github.com/elirc/pulse/blob/main/apps/consumer/src/dlq.ts), [dead-letter tests](https://github.com/elirc/pulse/blob/main/apps/consumer/src/dlq.test.ts), [backfill tests](https://github.com/elirc/pulse/blob/main/apps/consumer/src/backfill.test.ts).
 
 **Acceptance:**
 - Define the current invalid-event, retry, and dead-letter behavior from source.
@@ -75,7 +75,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As a report reader, I want time filters to count the intended events so that adjacent periods do not accidentally double-count boundaries.
 
-**Start here:** [Pulse Net query service](../../pulse-net/src/Pulse.Infrastructure/Services/QueryService.cs), [ingestion pipeline](../../pulse-net/src/Pulse.Infrastructure/Services/IngestionPipeline.cs), [Pulse Net tests](../../pulse-net/tests/Pulse.Tests).
+**Start here:** [Pulse Net query service](https://github.com/elirc/pulse-net/blob/main/src/Pulse.Infrastructure/Services/QueryService.cs), [ingestion pipeline](https://github.com/elirc/pulse-net/blob/main/src/Pulse.Infrastructure/Services/IngestionPipeline.cs), [Pulse Net tests](https://github.com/elirc/pulse-net/tree/main/tests/Pulse.Tests).
 
 **Acceptance:**
 - Document the selected query's interval inclusivity and timestamp interpretation.
@@ -94,7 +94,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As a customer exporting analytics, I want clear job completion and scoped results so that a background export is trustworthy.
 
-**Start here:** [ExportService](../../pulse-net/src/Pulse.Infrastructure/Services/ExportService.cs), [ExportJobProcessor](../../pulse-net/src/Pulse.Infrastructure/Services/ExportJobProcessor.cs), [tests](../../pulse-net/tests/Pulse.Tests).
+**Start here:** [ExportService](https://github.com/elirc/pulse-net/blob/main/src/Pulse.Infrastructure/Services/ExportService.cs), [ExportJobProcessor](https://github.com/elirc/pulse-net/blob/main/src/Pulse.Infrastructure/Services/ExportJobProcessor.cs), [tests](https://github.com/elirc/pulse-net/tree/main/tests/Pulse.Tests).
 
 **Acceptance:**
 - Trace actual job states, ownership checks, output location, and implemented size/cancellation limits.
@@ -113,7 +113,7 @@ Inspect Pulse's in-memory stream and consumer tests before starting infrastructu
 
 **Story:** As an operator, I want reproducible throughput and lag observations so that I can compare changes without misleading benchmark claims.
 
-**Start here:** [Pulse load guide](../../pulse/load/README.md), [load generator](../../pulse/packages/loadgen), your lifecycle map.
+**Start here:** [Pulse load guide](https://github.com/elirc/pulse/blob/main/load/README.md), [load generator](https://github.com/elirc/pulse/tree/main/packages/loadgen), your lifecycle map.
 
 **Acceptance:**
 - Choose a bounded local workload and record event size/rate, duration, environment, accepted count, processed count, and failures.

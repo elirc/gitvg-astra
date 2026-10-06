@@ -24,16 +24,16 @@ sequenceDiagram
 
 ## Read in this order
 
-1. [App.tsx](../../folio-app/client/src/App.tsx): which route renders a workspace, and where authentication wraps it?
-2. [WorkspacePage.tsx](../../folio-app/client/src/pages/WorkspacePage.tsx): how are the selected page and refresh callbacks connected?
-3. [PageView.tsx](../../folio-app/client/src/components/PageView.tsx): find the title input, blur handler, `renamePage`, and conflict branch.
-4. [folio.ts](../../folio-app/client/src/api/folio.ts): find the route and HTTP method in `renamePage`.
-5. [client.ts](../../folio-app/client/src/api/client.ts): inspect headers, serialization, 204 handling, and `ApiError`.
-6. [PageDtos.cs](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs): read `UpdatePageRequest`, its validation attributes, and `ExpectedVersion`.
-7. [PagesController.cs](../../folio-app/server/Folio.Api/Controllers/PagesController.cs): find `Update`, then how `MapToDetail` maps service statuses.
-8. [PageService.cs](../../folio-app/server/Folio.Api/Services/PageService.cs): read `UpdateAsync`, its authorization call, version comparison, mutation, and persistence.
-9. [PageAuthorization.cs](../../folio-app/server/Folio.Api/Auth/PageAuthorization.cs), [Page.cs](../../folio-app/server/Folio.Domain/Entities/Page.cs), and [FolioDbContext.cs](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs): identify caller access, stored state, and database mapping.
-10. [PageView.test.tsx](../../folio-app/client/src/components/PageView.test.tsx) and [ProductionReadinessTests.cs](../../folio-app/server/Folio.Tests/ProductionReadinessTests.cs): locate evidence for the successful and stale-write paths.
+1. [App.tsx](https://github.com/elirc/folio-app/blob/main/client/src/App.tsx): which route renders a workspace, and where authentication wraps it?
+2. [WorkspacePage.tsx](https://github.com/elirc/folio-app/blob/main/client/src/pages/WorkspacePage.tsx): how are the selected page and refresh callbacks connected?
+3. [PageView.tsx](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx): find the title input, blur handler, `renamePage`, and conflict branch.
+4. [folio.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/folio.ts): find the route and HTTP method in `renamePage`.
+5. [client.ts](https://github.com/elirc/folio-app/blob/main/client/src/api/client.ts): inspect headers, serialization, 204 handling, and `ApiError`.
+6. [PageDtos.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs): read `UpdatePageRequest`, its validation attributes, and `ExpectedVersion`.
+7. [PagesController.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PagesController.cs): find `Update`, then how `MapToDetail` maps service statuses.
+8. [PageService.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs): read `UpdateAsync`, its authorization call, version comparison, mutation, and persistence.
+9. [PageAuthorization.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/PageAuthorization.cs), [Page.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Domain/Entities/Page.cs), and [FolioDbContext.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs): identify caller access, stored state, and database mapping.
+10. [PageView.test.tsx](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.test.tsx) and [ProductionReadinessTests.cs](https://github.com/elirc/folio-app/blob/main/server/Folio.Tests/ProductionReadinessTests.cs): locate evidence for the successful and stale-write paths.
 
 ## Translate the vocabulary
 

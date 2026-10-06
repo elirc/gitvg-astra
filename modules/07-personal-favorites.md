@@ -20,7 +20,7 @@ Map every `IsFavorite` occurrence before editing. Run `rg -n 'IsFavorite|isFavor
 
 **Story:** As a workspace member, I want my favorites independent of others so that my navigation reflects my own work.
 
-**Start here:** [shared-favorite architecture](../../folio-app/docs/architecture.md), [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [ADR template](../templates/adr.md).
+**Start here:** [shared-favorite architecture](https://github.com/elirc/folio-app/blob/main/docs/architecture.md), [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [ADR template](../templates/adr.md).
 
 **Acceptance:**
 - Record current behavior with Ada and Grace, then specify the desired independent behavior.
@@ -39,7 +39,7 @@ Map every `IsFavorite` occurrence before editing. Run `rg -n 'IsFavorite|isFavor
 
 **Story:** As a maintainer, I want persistent favorite ownership so that independent preferences survive restarts and upgrades.
 
-**Start here:** [Domain entities](../../folio-app/server/Folio.Domain/Entities), [DbContext](../../folio-app/server/Folio.Infrastructure/Persistence/FolioDbContext.cs), [migrations](../../folio-app/server/Folio.Infrastructure/Persistence/Migrations).
+**Start here:** [Domain entities](https://github.com/elirc/folio-app/tree/main/server/Folio.Domain/Entities), [DbContext](https://github.com/elirc/folio-app/blob/main/server/Folio.Infrastructure/Persistence/FolioDbContext.cs), [migrations](https://github.com/elirc/folio-app/tree/main/server/Folio.Infrastructure/Persistence/Migrations).
 
 **Acceptance:**
 - Introduce a new favorite entity/relationship with member/page references and a database uniqueness guarantee.
@@ -58,7 +58,7 @@ Map every `IsFavorite` occurrence before editing. Run `rg -n 'IsFavorite|isFavor
 
 **Story:** As a member, I want starring and unstarring to change only my preferences so that I cannot alter another member's navigation.
 
-**Start here:** [PageService favorite methods](../../folio-app/server/Folio.Api/Services/PageService.cs), [PagesController](../../folio-app/server/Folio.Api/Controllers/PagesController.cs), [CurrentMember](../../folio-app/server/Folio.Api/Auth/CurrentMember.cs).
+**Start here:** [PageService favorite methods](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [PagesController](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Controllers/PagesController.cs), [CurrentMember](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Auth/CurrentMember.cs).
 
 **Acceptance:**
 - Keep existing favorite routes while taking member identity from the authenticated accessor.
@@ -77,7 +77,7 @@ Map every `IsFavorite` occurrence before editing. Run `rg -n 'IsFavorite|isFavor
 
 **Story:** As a member, I want the tree, detail, list, and search to agree about my favorites so that switching views never shows another person's stars.
 
-**Start here:** [PageService](../../folio-app/server/Folio.Api/Services/PageService.cs), [SearchService](../../folio-app/server/Folio.Api/Services/SearchService.cs), [Page DTOs](../../folio-app/server/Folio.Api/Contracts/PageDtos.cs).
+**Start here:** [PageService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/PageService.cs), [SearchService](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Services/SearchService.cs), [Page DTOs](https://github.com/elirc/folio-app/blob/main/server/Folio.Api/Contracts/PageDtos.cs).
 
 **Acceptance:**
 - Existing `isFavorite` response fields become caller-relative without changing their wire type.
@@ -96,7 +96,7 @@ Map every `IsFavorite` occurrence before editing. Run `rg -n 'IsFavorite|isFavor
 
 **Story:** As a member, I want accurate star feedback in the page and sidebar so that I can trust my saved shortcuts.
 
-**Start here:** [PageView](../../folio-app/client/src/components/PageView.tsx), [FavoritesList](../../folio-app/client/src/components/FavoritesList.tsx), [WorkspacePage](../../folio-app/client/src/pages/WorkspacePage.tsx).
+**Start here:** [PageView](https://github.com/elirc/folio-app/blob/main/client/src/components/PageView.tsx), [FavoritesList](https://github.com/elirc/folio-app/blob/main/client/src/components/FavoritesList.tsx), [WorkspacePage](https://github.com/elirc/folio-app/blob/main/client/src/pages/WorkspacePage.tsx).
 
 **Acceptance:**
 - Update help text to explain personal favorites now that the server implements them.
